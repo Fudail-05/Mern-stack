@@ -1,0 +1,169 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="Grid.css">
+        <title>Leaders Series</title>
+        <style>
+            body {
+                background: linear-gradient(to bottom, #FF9933, white, #138808);
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+            .title h1 {
+                text-align: center;
+                color: #000080;
+                margin-top: 20px;
+                text-shadow: 0 8px 20px #2e262e;
+            }
+            .section {
+                padding: 20px;
+                text-align: center;
+            }
+            .section h2 {
+                color: #222;
+                margin-bottom: 10px;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+                justify-items: center;
+                margin-top: 20px;
+                position: relative;
+            }
+            .image-container {
+                position: relative;
+                width: 150px;
+                height: 150px;
+            }
+            .image {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 5px;
+                transition: transform 0.3s ease;
+            }
+            .image:hover {
+                transform: scale(1.1);
+            }
+            .info {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 14px;
+                font-weight: bold;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                text-align: center;
+            }
+            .image-container:hover .info {
+                opacity: 1;
+            }
+            footer {
+                text-align: center;
+                padding: 10px;
+                background: #000080;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <h1><strong><u>Leaders Series</u></strong></h1>
+        </div>
+        <div class="section">
+            <h2><strong>Prime Ministers Of India</strong></h2>
+            <hr>
+            <div class="grid-container">
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Jnehru.jpg/625px-Jnehru.jpg" alt="Jawaharlal Nehru">
+                    <div class="info">Jawaharlal Nehru (1947-1964)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Lal_Bahadur_Shastri_%28from_stamp%29.jpg/389px-Lal_Bahadur_Shastri_%28from_stamp%29.jpg" alt="Lal Bahadur Shastri">
+                    <div class="info">Lal Bahadur Shastri (1964-1966)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/IndiraGandhi.png/330px-IndiraGandhi.png" alt="Indira Gandhi">
+                    <div class="info">Indira Gandhi (1966-1977, 1980-1984)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Morarji_Desai_%28portrait%29.png" alt="Morarji Desai">
+                    <div class="info">Morarji Desai (1977-1979)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Rajeev_Gandhi.jpg/330px-Rajeev_Gandhi.jpg" alt="Rajeev Gandhi">
+                    <div class="info">Rajeev Gandhi (1984-1989)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/V._P._Singh_%28cropped%29.jpg/330px-V._P._Singh_%28cropped%29.jpg" alt="V. P. Singh">
+                    <div class="info">V. P. Singh (1989-1990)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/P._V._Narasimha_Rao.JPG/330px-P._V._Narasimha_Rao.JPG" alt="P. V. Narasimha Rao">
+                    <div class="info">P. V. Narasimha Rao (1991-1996)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Atal_Bihari_Vajpayee_%28crop_2%29.jpg/330px-Atal_Bihari_Vajpayee_%28crop_2%29.jpg" alt="Atal Bihari Vajpayee">
+                    <div class="info">Atal Bihari Vajpayee (1996, 1998-2004)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Official_Portrait_of_the_Prime_Minister_Dr._Manmohan_Singh.jpg/330px-Official_Portrait_of_the_Prime_Minister_Dr._Manmohan_Singh.jpg" alt="Manmohan Singh">
+                    <div class="info">Manmohan Singh (2004-2014)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Shri_Narendra_Modi%2C_Prime_Minister_of_India.jpg/330px-Shri_Narendra_Modi%2C_Prime_Minister_of_India.jpg" alt="Narendra Modi">
+                    <div class="info">Narendra Modi (2014-present)</div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2><strong>Chief Ministers of Tamil Nadu</strong></h2>
+            <hr>
+            <div class="grid-container">
+                <div class="image-container">
+                    <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/OP_Ramaswamy_Reddiyar_2010_stamp_of_India.jpg/330px-OP_Ramaswamy_Reddiyar_2010_stamp_of_India.jpg" alt="O. P. Ramaswamy Reddiar">
+                    <div class="info">O. P. Ramaswamy Reddiar (1947-1949)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://th.bing.com/th/id/OIP.OTKXzHU5k7FsBBwrIpS4gQHaFj?rs=1&pid=ImgDetMain" alt="M. Bhaktavatsalam">
+                    <div class="info">K.Kamaraj(1953-1963)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://static.hindutamil.in/hindu/uploads/news/2020/10/09/xlarge/588829.jpg" alt="C. N. Annadurai">
+                    <div class="info">M. Bhaktavatsalam  (1964-1967)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://th.bing.com/th/id/R.9c6088998a09bfebef9e1498e15de9d5?rik=2JMWJuDw02xxzA&riu=http%3a%2f%2fpavithran.net%2fwp-content%2fuploads%2f2020%2f04%2fArignar-Annadurai-Photos-9.jpeg%3fis-pending-load%3d1&ehk=wGtJQwXDtsFGw08KWocTqON5NQaet4beaXpVpdr75xI%3d&risl=&pid=ImgRaw&r=0" alt="M. Karunanidhi">
+                    <div class="info">C N Annadurai (1967-1969)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://bigwire.in/wp-content/uploads/2018/08/Karunanidhi.jpg" alt="Karunanithi">
+                    <div class="info">M. Karunanidhi (1969-1976, 1989-1991, 1996-2011)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://i.pinimg.com/originals/af/9c/5a/af9c5a3ee992d3755313f96a4afb6554.jpg" alt="M. Karunanidhi">
+                    <div class="info">M G Ramachandran (1977-1987)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://th.bing.com/th/id/R.2012551da7ebb458a68f82d565ba2511?rik=k5nQYfKQkEIG0Q&riu=http%3a%2f%2f4.bp.blogspot.com%2f-6nUTadKLNso%2fUDfgg38AvkI%2fAAAAAAAAQPE%2fDu9q1vm8KV4%2fs1600%2fPRINTING%2c%2bHIGH%2bQUALITY%2bJAYALALITHA%2bPHOTOS%2c%2bAMMA%2bHQ%2bPHOTOS%2c%2bTAMILANDU%2bCM%2bAMMA%2bPHOTOS1.JPG&ehk=U5B%2bYZR67HSET6XfjADqvvJq4vSJXGe5beKGT%2bCZigk%3d&risl=&pid=ImgRaw&r=0" alt="O. Panneerselvam">
+                    <div class="info">. Jayalalithaa (1991-1996, 2002-2006, 2012-2016)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://cdna.artstation.com/p/assets/images/images/034/867/642/large/prabas-arts-palaniswami-eps-copy.jpg?1613467722" alt="E. Palaniswami">
+                    <div class="info">E. Palaniswami (2016-2021)</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="https://th.bing.com/th/id/R.3a86cfd702bf093505dac5c9ea47bf65?rik=L%2bic7UdOUCAqoA&riu=http%3a%2f%2fsmarttiruppur.com%2fimg%2fm-k-stalin-tamil-nadu-cm.jpg&ehk=Z4%2bFD%2brE84olZVf8p%2bHVrYQ9Tj2UwiviHPz5Hs1avo0%3d&risl=&pid=ImgRaw&r=0" alt="M. K. Stalin">
+                    <div class="info">M. K. Stalin (2021-present)</div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2025 Responsive Design. All rights Provided</p>
+        </footer>
+    </body>
+</html>

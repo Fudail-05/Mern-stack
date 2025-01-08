@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            body{
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: linear-gradient(yellow,pink,blue);
+                color: red;
+                font-size: 30;
+                font-weight: 900
+
+            }
+            .ani
+            {
+                overflow: hidden;
+                width: 90%;
+                border: 2px solid black;
+                border-radius:50%;
+                padding: 32px;
+                white-space: nowrap;
+            }
+            .eff
+            {
+                display: inline-block;
+                animation: scroll-left 0.3s linear infinite;
+
+            }
+            @keyframes scroll-left
+            {
+                form{
+                    transform: translateY(100%);
+                }
+                to
+                {
+                    transform: translateY(-100%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ani">
+            <div class="eff">
+                HERE IS SCROLLING TEXT ANIMATION
+            </div>
+
+        </div>
+    </body>
+</html>
