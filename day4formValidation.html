@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>Styled Form Validation</title>
+        <style>
+            /* General Page Styling */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            /* Form Container */
+            .form-container {
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                width: 350px;
+            }
+
+            h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            /* Form Fields */
+            .form-one {
+                margin-bottom: 15px;
+            }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            input:focus {
+                border-color: #007bff;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+
+            /* Error Messages */
+            .error {
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+            }
+
+            /* Submit Button */
+            button {
+                width: 100%;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 12px;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <h2>Form With Validation</h2>
+            <form action="" id="myfrm">
+                <div class="form-one">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                    <div class="error" id="usernameerr"></div>
+                </div>
+                <div class="form-one">
+                    <label for="Email">Email</label>
+                    <input type="text" id="Email" name="Email">
+                    <div class="error" id="Emailerr"></div>
+                </div>
+                <div class="form-one">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                    <div class="error" id="passworderr"></div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script>
+            document.getElementById("myfrm").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                // Clear previous errors
+                document.getElementById('usernameerr').textContent = "";
+                document.getElementById('Emailerr').textContent = "";
+                document.getElementById('passworderr').textContent = "";
+
+                // Get input values
+                const username = document.getElementById("username").value.trim();
+                const Email = document.getElementById("Email").value.trim();
+                const password = document.getElementById("password").value.trim();
+
+                let valid = true; // Corrected variable name
+
+                // Username Validation
+                if (username === "") {
+                    document.getElementById("usernameerr").textContent = "Username is required";
+                    valid = false;
+                }
+
+                // Email Validation
+                if (Email === "") {
+                    document.getElementById("Emailerr").textContent = "Email is required";
+                    valid = false;
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(Email)) {
+                    document.getElementById("Emailerr").textContent = "Invalid email format";
+                    valid = false;
+                }
+
+                // Password Validation
+                if (password === "") {
+                    document.getElementById("passworderr").textContent = "Password is required";
+                    valid = false;
+                } else if (password.length < 6) {
+                    document.getElementById("passworderr").textContent = "Password must be at least 6 characters";
+                    valid = false;
+                }
+
+                // Overall form validation
+                if (valid) {
+                    alert("Form Validation Successful");
+                }
+            });
+        </script>
+    </body>
+</html>

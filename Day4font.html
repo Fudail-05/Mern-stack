@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            #tag1{
+
+            }
+            #tag2{
+                color:blue ;
+                transition: color 0.5s ease;
+                font-size: large;
+            }
+            .marquee{
+                overflow: hidden;
+                white-space: nowrap;
+                box-sizing: border-box;
+                animation: makquee 10s;
+            }
+            @keyframes marquee{
+                from{
+                    transform: translateX(100%);
+
+                }
+                to{
+                    transform: translateX(-100%);
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <marquee><center><h1>design udsing js</h1></center></marquee>
+        <p id="tag1">text one</p>
+        <p id="tag2">text two</p>
+        <script>
+            document.getElementById('tag1').style.color='pink';
+            document.getElementById('tag2').style.fontFamily='Arial';
+            document.getElementById('tag3').style.fontSize='20px';
+
+        </script>
+    </body>
+</html>

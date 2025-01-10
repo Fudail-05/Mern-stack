@@ -1,0 +1,31 @@
+<html>
+    <body>
+        
+        <h2>
+            JAVASCRIPT VALIDATION
+        </h2>
+        <p>
+            PLEASE ENTER A NUMBER BETWEEN 1 AND 10
+        </p>
+        <input id="val">
+        <button type="button" onclick="myfunc()"> DESTROY</button>
+        <p id="demo"></p>
+        <script>
+            function myfunc()
+            {
+                let a = document.getElementById("val").value;
+                let res;
+                if(a<1 ||a>10)
+            {
+
+                res = "INPUT INCORRECT";
+            }
+            else{
+                res="VALIDATION SUCCESSFUL"
+            }
+            document.getElementById("demo").innerHTML=res;
+
+            }
+        </script>
+    </body>
+</html>

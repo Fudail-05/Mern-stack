@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light On/Off</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .lightbulb img {
+            width: 150px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #onButton {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        #offButton {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #onButton:hover {
+            background-color: #45a049;
+        }
+
+        #offButton:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Light On/Off Project</h1>
+        <div class="lightbulb">
+            <img id="lightImage" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Light_bulb_off.png" alt="Lightbulb">
+        </div>
+        <div class="controls">
+            <button id="onButton">Turn On</button>
+            <button id="offButton">Turn Off</button>
+        </div>
+    </div>
+    <script>
+        const lightImage = document.getElementById('lightImage');
+        const onButton = document.getElementById('onButton');
+        const offButton = document.getElementById('offButton');
+        onButton.addEventListener('click', () => {
+            lightImage.src = 'ONbulb.jpg';
+        });
+        offButton.addEventListener('click', () => {
+            lightImage.src = 'OFF.jpg';
+        });
+    </script>
+</body>
+</html>
