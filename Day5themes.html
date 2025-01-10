@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Theme Animation Using JavaScript</title>
+    <style>
+       
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+            font-weight: bold;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px auto;
+            width: fit-content;
+            transition: color 0.5s, border-color 0.5s;
+        }
+
+        ul.List {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            width: 60%;
+        }
+
+       
+        .lst-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, background-color 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .lst-item:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .lst-item span {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .button {
+            padding: 8px 15px;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .lst-item {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .lst-item:hover {
+            background-color: #292929;
+            box-shadow: 0 6px 12px rgba(255, 150, 150, 0.3);
+        }
+
+        .dark-mode h2 {
+            color: #e0e0e0;
+            border-color: #e0e0e0;
+        }
+
+        .dark-mode .button {
+            background-color: #e57373;
+            color: #121212;
+        }
+
+        .dark-mode .button:hover {
+            background-color: #ff8a65;
+        }
+
+        
+        .btn {
+            border: none;
+            padding: 12px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .dark-mode .btn {
+            background-color: #e57373;
+            color: #121212;
+        }
+
+        .dark-mode .btn:hover {
+            background-color: #ff8a65;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="DarkMode()">Toggle Dark Mode</button>
+    <div class="container">
+        <h2>Theme Animation Using JavaScript</h2>
+        <ul class="List">
+            <li class="lst-item">
+                <span>JavaScript</span>
+                <button class="button">Start!</button>
+            </li>
+            <li class="lst-item">
+                <span>React</span>
+                <button class="button">Start!</button>
+            </li>
+            <li class="lst-item">
+                <span>Angular</span>
+                <button class="button">Start!</button>
+            </li>
+            <li class="lst-item">
+                <span>MongoDB</span>
+                <button class="button">Start!</button>
+            </li>
+        </ul>
+    </div>
+    <script>
+        function DarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
